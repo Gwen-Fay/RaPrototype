@@ -547,7 +547,7 @@ void main()
 	}
 	else
 	{
-		color = vec4(smoothstep(1- uBackColor1, 1 -uBackColor2, vec3(uv.y + 0.5)), 1.0);
+		color = vec4(mix(uBackColor1, uBackColor2, vec3(uv.y + 0.5)), 1.0);
 	}
 	//color = vec4(1, 0, 0, 1);
 }

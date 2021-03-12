@@ -20,33 +20,32 @@ int main()
 	clock_t frame;
 	clock_t time = clock();
 	{
-		sceneData.setBackgroundColor1(0,0,1);
-		sceneData.setBackgroundColor2(0, 0, 0);
+		sceneData.setBackgroundColor1(0,0,0);
+		sceneData.setBackgroundColor2(0.3, 0.3, 0.3);
+		sceneData.setSun(2,5,-10,20);
 
 		//Create and modify EntitySDFs here.
-		EntitySDF wall = EntitySDF(renderer);
-		wall.setFuncID(FuncSDF::BOX);
-		wall.setScale(7, 7, 1);
-		wall.setCombineID(CombineSDF::SUBTRACT);
-		wall.setColor(0.7, 0, 0);
+		EntitySDF sphere = EntitySDF(renderer);
+		EntitySDF box = EntitySDF(renderer);
+		EntitySDF cone = EntitySDF(renderer);
 
-		EntitySDF bubble1 = EntitySDF(renderer, &wall);
-		bubble1.x = 1.5;
-		bubble1.setFuncID(FuncSDF::SPHERE);
-		bubble1.setColor(0.7, 0, 0);
+		sphere.setColor(1, 0, 0);
+		sphere.x = -2;
+		sphere.setFuncID(FuncSDF::SPHERE);
 
-		EntitySDF bubble2 = EntitySDF(renderer, &wall);
-		bubble2.x = -1.5;
-		bubble2.scaleY = 2;
-		bubble2.setColor(0.7, 0, 0);
-		bubble2.setFuncID(FuncSDF::SPHERE);
+		box.setColor(0, 1, 0);
+		box.setFuncID(FuncSDF::BOX);
+		box.setScale(1.5, 1.5, 1.5);
+
+		cone.setColor(0, 0, 1);
+		cone.setPosition(2,0.5,0);
+		cone.setFuncID(FuncSDF::CONE);
 
 		while (!renderer->shouldClose())
 		{
 			time = clock();
 
-			//modify EntitySDFs here
-			wall.y = sin(float(time) / 1000);
+			//modify EntitySDFs over time here 
 
 			//Set Shaders and Render
 			renderer->setUniforms(sceneData);
