@@ -11,7 +11,12 @@ Ra is a Ray Marching render engine. Currently Ra supports light and penumbra sha
 Planned features include Ambient Occlusion, transparency, reflections, and Textures.
 
 Here are some screenshots of the unique Ray Marched rendering in action:  
-![blob](https://imgur.com/sBvJpzy.gif)
+![blob](https://imgur.com/sBvJpzy.gif)  
+This is 6 Spheres, smooth unioned together and moving.  
+<\br>
+<\br>
+![Shadow](https://imgur.com/KlXvIjW.gif)  
+Light is moving, and so is it's penumbra value.
 
 ## How does Ray Marching Work?
 
