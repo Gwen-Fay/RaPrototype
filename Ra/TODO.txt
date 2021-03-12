@@ -1,0 +1,15 @@
+TODO:
+
+Ambient Occulsion
+
+Process input, so you can move camera with a mouse, for example.
+
+Come up with a better system for processing NodeSDF children in glsl
+	
+Reflection Per Object
+
+Refraction Per Object
+
+multiple point lights and an actual sun
+
+Turn project into a DLL, so that its easy to make executables.
