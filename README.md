@@ -23,8 +23,9 @@ Light is moving, and so is it's penumbra value.
 It's just a cube, with some sin wave distortion.  
 <br />
 <br />
-![Slime Cube](https://imgur.com/9ZLggEj.gif)  
-It's just a cube, with some sin wave distortion.  
+![Fractal Nonsense](https://imgur.com/wAzRxUl.gif)  
+This Fractal is cycling through some Julia Sets of the Mandelbulb.  
+The Color is based on the coordinates used for that Julia set.
 
 ## How does Ray Marching Work?
 
