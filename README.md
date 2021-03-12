@@ -16,7 +16,11 @@ This is 6 Spheres, smooth unioned together and moving.
 <br />
 <br />
 ![Shadow](https://imgur.com/KlXvIjW.gif)  
-Light is moving, and so is it's penumbra value.
+Light is moving, and so is it's penumbra value.  
+<br />
+<br />
+![Slime Cube](https://imgur.com/9ZLggEj)  
+It's just a cube, with some sin wave distortion.  
 
 ## How does Ray Marching Work?
 
