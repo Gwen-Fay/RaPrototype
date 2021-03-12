@@ -1,4 +1,4 @@
 # Ra
 a Ray Marching Renderer
 
-![alt text](https://imgur.com/ODeeMJh)
+![alt text](https://imgur.com/ODeeMJh.png)
