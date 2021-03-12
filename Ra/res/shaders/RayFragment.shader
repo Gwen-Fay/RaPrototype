@@ -262,7 +262,7 @@ vec3 repeat(vec3 p, float c, vec3 l)
 //returns the SDF of a single node
 float processNode(vec3 p, int id)
 {
-	vec4 modPos = vec4(p, 1.0);
+	vec4 newPos = uNodes[id].trans * vec4(p,1.0);
 
 	float scale = 1.0;
 	
@@ -276,13 +276,13 @@ float processNode(vec3 p, int id)
 
 		vec3 scaleVec = vec3(1.0);
 
-		scaleVec.x = mix(ds1.x, ds2.x, smoothstep(dsS.x, dsE.x, modPos.x));
-		scaleVec.y = mix(ds1.y, ds2.y, smoothstep(dsS.y, dsE.y, modPos.y));
-		scaleVec.z = mix(ds1.z, ds2.z, smoothstep(dsS.z, dsE.z, modPos.z));
+		scaleVec.x = mix(ds1.x, ds2.x, smoothstep(dsS.x, dsE.x, newPos.x));
+		scaleVec.y = mix(ds1.y, ds2.y, smoothstep(dsS.y, dsE.y, newPos.y));
+		scaleVec.z = mix(ds1.z, ds2.z, smoothstep(dsS.z, dsE.z, newPos.z));
 
-		modPos.yz /= scaleVec.x;
-		modPos.xz /= scaleVec.y;
-		modPos.xy /= scaleVec.z;
+		newPos.yz /= scaleVec.x;
+		newPos.xz /= scaleVec.y;
+		newPos.xy /= scaleVec.z;
 
 		scale = length(scaleVec);
 	}
@@ -296,20 +296,19 @@ float processNode(vec3 p, int id)
 
 		vec3 rotVec = vec3(1.0);
 
-		rotVec.x = mix(dr1.x, dr2.x, smoothstep(drS.x, drE.x, modPos.x));
-		rotVec.y = mix(dr1.y, dr2.y, smoothstep(drS.y, drE.y, modPos.y));
-		rotVec.z = mix(dr1.z, dr2.z, smoothstep(drS.z, drE.z, modPos.z));
+		rotVec.x = mix(dr1.x, dr2.x, smoothstep(drS.x, drE.x, newPos.x));
+		rotVec.y = mix(dr1.y, dr2.y, smoothstep(drS.y, drE.y, newPos.y));
+		rotVec.z = mix(dr1.z, dr2.z, smoothstep(drS.z, drE.z, newPos.z));
 
-		modPos.yz *= Rot(rotVec.x);
-		modPos.xz *= Rot(rotVec.y);
-		modPos.xy *= Rot(rotVec.z);
+		newPos.yz *= Rot(rotVec.x);
+		newPos.xz *= Rot(rotVec.y);
+		newPos.xy *= Rot(rotVec.z);
 
 	}
 
 	float transScaleVec = length(vec3(uNodes[id].trans[0].x, uNodes[id].trans[1].y, uNodes[id].trans[2].z));
 	scale *= transScaleVec;
 
-	vec4 newPos = uNodes[id].trans * vec4(modPos);
 
 	if (length(uNodes[id].elong) > 0.0)
 	{
@@ -380,7 +379,7 @@ float processNode(vec3 p, int id)
 		vec4 amp = uNodes[id].distortSinAmp;
 		vec4 freq = uNodes[id].distortSinFreq;
 		vec4 phase = uNodes[id].distortSinPhase;
-		vec4 sinVec = amp * sin(freq * modPos + phase);
+		vec4 sinVec = amp * sin(freq * newPos + phase);
 
 		dist += sinVec.x + sinVec.y + sinVec.z;
 	}
