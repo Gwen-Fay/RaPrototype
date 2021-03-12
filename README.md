@@ -23,7 +23,7 @@ Light is moving, and so is it's penumbra value.
 It's just a cube, with some sin wave distortion.  
 <br />
 <br />
-![Fractal Nonsense](https://imgur.com/wAzRxUl.gif)  
+![Fractal Nonsense](https://imgur.com/cmL4STj.gif)  
 This Fractal is cycling through some Julia Sets of the Mandelbulb.  
 The Color is based on the coordinates used for that Julia set.
 
