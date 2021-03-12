@@ -13,8 +13,8 @@ Planned features include Ambient Occlusion, transparency, reflections, and Textu
 Here are some screenshots of the unique Ray Marched rendering in action:  
 ![blob](https://imgur.com/sBvJpzy.gif)  
 This is 6 Spheres, smooth unioned together and moving.  
-<\br>
-<\br>
+<br />
+<br />
 ![Shadow](https://imgur.com/KlXvIjW.gif)  
 Light is moving, and so is it's penumbra value.
 
