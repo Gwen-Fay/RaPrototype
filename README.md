@@ -2,9 +2,9 @@
 a Ray Marching Renderer
 
 ## Table of contents
-* [About Ra](#About Ra)
-* [Example Output](#Example Output)
-* [Basic Tutorial](#Basic Tutorial)
+* [About Ra](#About-Ra)
+* [Example Output](#Example-Output)
+* [Basic Tutorial](#Basic-Tutorial)
 
 
 ## About Ra
