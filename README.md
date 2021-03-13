@@ -72,9 +72,13 @@ With Ray Marching, you take the Ray Origion, the Ray Direction, and the scene SD
 Get the SDF. "March" forward from the Ray Origion in Ray Direction by the SDF Distance Function. We don't know
 the direction that a surface might be, but we can safely measure forward the SDF Distance.
 Then, from this new location, repeat the process. Get the SDF, march forward. Do this untill the SDF is arbitrarily small,
-say epsilon = 0.01 for example. Then stop, you got close enough.  
+say epsilon = 0.01 for example. Then stop, you got close enough. If you go too far, just stop.
 ![RayMarchMiss](https://imgur.com/A3cSS7l.gif)  
 ![RayMarchHit](https://imgur.com/kIWqyZk.gif)  
+After the Ray March, you will have a close aproxximation of the point the ray collided with.
+From here, you can do some Ray Tracing like effects, like calculating soft shadows, ambient occusion,
+Reflections, Transparency, Lighting, etc. You can also distort the SDF distance like I did with the green cube above, or you can modify the Ray Origion position.
+In the Twisting box example, the Ray Origion is rotated around, the amound is a function of height. You can also 
 <br />
 <br />
 
