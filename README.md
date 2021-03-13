@@ -32,7 +32,7 @@ It's just a cube, with some sin wave distortion.
 <br />
 <br />
 ![Fractal Nonsense](https://imgur.com/cmL4STj.gif)  
-This Fractal is cycling through some Julia Sets of the Mandelbulb.  
+This Fractal is cycling through some Julia Sets of the famous Mandelbulb.  
 The Color is based on the coordinates used for that Julia set.  
 <br />
 <br />
@@ -78,13 +78,16 @@ say epsilon = 0.01 for example. Then stop, you got close enough. If you go too f
 After the Ray March, you will have a close aproxximation of the point the ray collided with.
 From here, you can do some Ray Tracing like effects, like calculating soft shadows, ambient occusion,
 Reflections, Transparency, Lighting, etc. You can also distort the SDF distance like I did with the green cube above, or you can modify the Ray Origion position.
-In the Twisting box example, the Ray Origion is rotated around, the amound is a function of height. You can also 
+In the Twisting box example, the Ray Origion is rotated around, the amound is a function of height. You can combine SDF primitives with various combine functions.
+The simpliest of which is the Union function, which just takes the min of each SDF. 
+And finally, because Ray Marching is a method of rendering that does not calcuate the exact surface, it just approaches the surface untill it is within some 
+epsilon, you can render shapes who's surface can't be calculated exactly. This is how it is possible to render the Mandelbulb fractal.
 <br />
 <br />
 
 ## How do I use Ra?
 ![alt text](https://imgur.com/ODeeMJh.png)
-In the Main function of this default scene:
+In the Main function of this scene in C++:
 ```
   EntitySDF sphere = EntitySDF(renderer);
 	EntitySDF box = EntitySDF(renderer);
@@ -102,3 +105,4 @@ In the Main function of this default scene:
 	cone.setPosition(2,0.5,0);
 	cone.setFuncID(FuncSDF::CONE);
 ```
+TODO Add more examples;
