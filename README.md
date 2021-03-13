@@ -86,7 +86,7 @@ epsilon, you can render shapes who's surface can't be calculated exactly. This i
 <br />
 
 ## How do I use Ra?
-![alt text](https://imgur.com/ODeeMJh.png)
+![alt text](https://imgur.com/fwz5Lhm.png)
 In the Main function of this scene in C++:
 ```
   EntitySDF sphere = EntitySDF(renderer);
@@ -105,4 +105,4 @@ In the Main function of this scene in C++:
 	cone.setPosition(2,0.5,0);
 	cone.setFuncID(FuncSDF::CONE);
 ```
-TODO Add more examples;
+TODO Add more examples
