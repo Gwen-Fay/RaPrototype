@@ -166,7 +166,6 @@
 	void TreeSDF::delNode(NodeSDF* node)
 	{
 		int index = node - nodes;
-		std::cout << index << std::endl;
 		if (nodes[index].childArrayID != -1)
 		{
 			for (int i = 0; i < 20; i++)
