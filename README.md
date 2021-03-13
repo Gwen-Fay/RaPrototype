@@ -42,7 +42,11 @@ I am only moving the box with code.
 <br />
 <br />
 ![Twisting Box](https://imgur.com/EftbKMF.gif)  
-The rotation of the box is distorted based on position.
+The rotation of the box is distorted based on position. 
+<br />
+<br />
+![Snowman](https://imgur.com/AIt8QfD.gif)  
+And finally, here is a cute image I made.
 <br />
 <br />
 ## How does Ray Marching Work?
