@@ -65,8 +65,16 @@ shoot rays into a scene with known spacial data and see if they hit anything, an
 Ray Marching uses a Signed Distance Field, or SDF to represent the spacial data. 
 We can ask, from any point in the scene, how far away are we from the surface.
 These distance fields are Signed, because inside of the shape returns a negative value.
-For primitive shapes, it is easy to calculate the SDF.
-![SphereSDF](https://imgur.com/EftbKMF.gif)  
+For primitive shapes, it is easy to calculate the SDF.  
+![SphereSDF](https://imgur.com/kj4py8C.gif)  
+Ra suports Sphere, Capsule, Box, Bounding Box, Torus, Cylinder, Cone, Plane and Mandelbulb as SDF primitives.
+With Ray Marching, you take the Ray Origion, the Ray Direction, and the scene SDF and use this algorithm:
+Get the SDF. "March" forward from the Ray Origion in Ray Direction by the SDF Distance Function. We don't know
+the direction that a surface might be, but we can safely measure forward the SDF Distance.
+Then, from this new location, repeat the process. Get the SDF, march forward. Do this untill the SDF is arbitrarily small,
+say epsilon = 0.01 for example. Then stop, you got close enough.  
+![RayMarchMiss](https://imgur.com/A3cSS7l.gif)  
+![RayMarchHit](https://imgur.com/kIWqyZk.gif)  
 <br />
 <br />
 
