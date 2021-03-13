@@ -7,10 +7,13 @@ a Ray Marching Renderer
 * [Basic Ra Tutorial](#Basic-Ra-Tutorial)
 
 ## About Ra
-Ra is a Ray Marching render engine. Currently Ra supports light and penumbra shadows.
+Ra is a Ray Marching render engine. Ray Marching is a unique way to render 3d shapes 
+using rays and without meshes. Currently Ra supports light and penumbra shadows.
 Planned features include Ambient Occlusion, transparency, reflections, and Textures.
 
-Here are some screenshots of the unique Ray Marched rendering in action:  
+Here are some screenshots of the unique Ray Marched rendering in action.
+Each scene is rendered in real time in a glfw window, again without meshes.  
+
 ![blob](https://imgur.com/sBvJpzy.gif)  
 This is 6 Spheres, smooth unioned together and moving.  
 <br />
@@ -29,7 +32,15 @@ The Color is based on the coordinates used for that Julia set.
 <br />
 <br />
 ![Infinite Donuts](https://imgur.com/pOOhabN.gif)  
-This is a single Torus object, with a repeating function applied to it. 
+This is a single Torus object, with a repeating function applied to it.  
+<br />
+<br />
+![Subtracting sets](https://imgur.com/6X5e0vi.gif)  
+I am showing you here how primitive shapes can be subtracted from eachother.
+The 6 spheres are subtracting from the box, and they are child nodes to the box.
+I am only moving the box with code.
+<br />
+<br />
 ## How does Ray Marching Work?
 
 ## Basic Ra Tutorial
