@@ -36,8 +36,8 @@ This is a single Torus object, with a repeating function applied to it.
 <br />
 <br />
 ![Subtracting sets](https://imgur.com/6X5e0vi.gif)  
-I am showing you here how primitive shapes can be subtracted from eachother.
-The 6 spheres are subtracting from the box, and they are child nodes to the box.
+I am showing you here how primitive shapes can be subtracted from eachother.  
+The 6 spheres are subtracting from the box, and they are child nodes to the box.  
 I am only moving the box with code.
 <br />
 <br />
