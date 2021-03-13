@@ -86,8 +86,8 @@ epsilon, you can render shapes who's surface can't be calculated exactly. This i
 <br />
 
 ## How do I use Ra?
-![alt text](https://imgur.com/fwz5Lhm.png)
-In the Main function of this scene in C++:
+![alt text](https://imgur.com/fwz5Lhm.png)  
+In the Main function of this scene in C++:  
 ```
   EntitySDF sphere = EntitySDF(renderer);
 	EntitySDF box = EntitySDF(renderer);
