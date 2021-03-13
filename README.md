@@ -3,13 +3,18 @@ a Ray Marching Renderer
 
 ## Table of contents
 * [About Ra](#About-Ra)
-* [How does Ray Marching Work?](#How-does-Ray-Marching-Work)
-* [Basic Ra Tutorial](#Basic-Ra-Tutorial)
+* [How does this magic work?](#How-does-this-magic-work)
+* [How do I use Ra?](#How-do-I-use-Ra?)
 
 ## About Ra
 Ra is a Ray Marching render engine. Ray Marching is a unique way to render 3d shapes 
 using rays and without meshes. Currently Ra supports light and penumbra shadows.
 Planned features include Ambient Occlusion, transparency, reflections, and Textures.
+
+My goals with this project was to:
+1) Practice C++
+2) Practice low level OpenGL stuff
+3) Learn about and experiement with Ray Marching
 
 Here are some screenshots of the unique Ray Marched rendering in action.
 Each scene is rendered in real time in a glfw window, again without meshes.  
@@ -49,9 +54,23 @@ The rotation of the box is distorted based on position.
 And finally, here is a cute image I made.
 <br />
 <br />
-## How does Ray Marching Work?
+## How does this magic work?
+![2 Triangles](https://imgur.com/mf2Gm19.gif)  
+First off, Ra uses 2 triangles to encompas the entire screen.
+This means to render a scene, we need some function that 
+takes in a screen coordinate and returns the color for that pixel.
+In the fragment shader, we need some sort of algorithm that can
+shoot rays into a scene with known spacial data and see if they hit anything, and at what angle.
+<br />
+Ray Marching uses a Signed Distance Field, or SDF to represent the spacial data. 
+We can ask, from any point in the scene, how far away are we from the surface.
+These distance fields are Signed, because inside of the shape returns a negative value.
+For primitive shapes, it is easy to calculate the SDF.
+![SphereSDF](https://imgur.com/EftbKMF.gif)  
+<br />
+<br />
 
-## Basic Ra Tutorial
+## How do I use Ra?
 ![alt text](https://imgur.com/ODeeMJh.png)
 In the Main function of this default scene:
 ```
