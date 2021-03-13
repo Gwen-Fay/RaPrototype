@@ -25,8 +25,11 @@ It's just a cube, with some sin wave distortion.
 <br />
 ![Fractal Nonsense](https://imgur.com/cmL4STj.gif)  
 This Fractal is cycling through some Julia Sets of the Mandelbulb.  
-The Color is based on the coordinates used for that Julia set.
-
+The Color is based on the coordinates used for that Julia set.  
+<br />
+<br />
+![Infinite Donuts](https://imgur.com/pOOhabN.gif)  
+This is a single Torus object, with a repeating function applied to it. 
 ## How does Ray Marching Work?
 
 ## Basic Ra Tutorial
