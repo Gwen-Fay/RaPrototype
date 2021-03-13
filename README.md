@@ -15,7 +15,7 @@ Here are some screenshots of the unique Ray Marched rendering in action.
 Each scene is rendered in real time in a glfw window, again without meshes.  
 
 ![blob](https://imgur.com/sBvJpzy.gif)  
-This is 6 Spheres, smooth unioned together and moving.  
+This is 6 Spheres, smooth unioned together and each are moving.  
 <br />
 <br />
 ![Shadow](https://imgur.com/KlXvIjW.gif)  
@@ -38,7 +38,11 @@ This is a single Torus object, with a repeating function applied to it.
 ![Subtracting sets](https://imgur.com/6X5e0vi.gif)  
 I am showing you here how primitive shapes can be subtracted from eachother.  
 The 6 spheres are subtracting from the box, and they are child nodes to the box.  
-I am only moving the box with code.
+I am only moving the box with code.  
+<br />
+<br />
+![Twisting Box](https://imgur.com/EftbKMF.gif)  
+The rotation of the box is distorted based on position.
 <br />
 <br />
 ## How does Ray Marching Work?
