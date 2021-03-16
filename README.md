@@ -16,8 +16,9 @@ My goals with this project was to:
 2) Practice low level OpenGL stuff
 3) Learn about and experiement with Ray Marching
 
-Here are some screenshots of the unique Ray Marched rendering in action.
-Each scene is rendered in real time in a glfw window, again without meshes.  
+Overall, it was a fun side project to work on. Here are some screenshots of 
+the unique Ray Marched rendering in action.Each scene is rendered in real time 
+in a glfw window, again without meshes.  
 
 ![blob](https://imgur.com/sBvJpzy.gif)  
 This is 6 Spheres, smooth unioned together and each are moving.  
