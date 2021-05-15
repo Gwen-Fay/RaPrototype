@@ -12,13 +12,14 @@ using rays and without meshes. Currently Ra supports light and penumbra shadows.
 Planned features include Ambient Occlusion, transparency, reflections, and Textures.
 
 My goals with this project was to:
-1) Practice C++
+1) Learn C++
 2) Practice low level OpenGL stuff
 3) Learn about and experiement with Ray Marching
 
 Overall, it was a fun side project to work on. Here are some screenshots of 
-the unique Ray Marched rendering in action.Each scene is rendered in real time 
-in a glfw window, again without meshes.  
+the unique Ray Marched rendering in action. Each scene is rendered in real time 
+in a glfw window, again without meshes. If I were to try and make this a more
+practical rendering engine, I would probably rewrite it.
 
 ![blob](https://imgur.com/sBvJpzy.gif)  
 This is 6 Spheres, smooth unioned together and each are moving.  
